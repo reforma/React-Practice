@@ -1,1 +1,28 @@
-<head><script src="http://fb.me/react-0.13.0.js"></script><script src="http://fb.me/JSXTransformer-0.13.0.js"></script><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head><body></body><script type="text/jsx">//define a classvar HelloWorld = React.createClass({  render: function(){    return <div><button class="btn btn-primary">    Hellow World <span class="badge">4</span>    </button></div>  }});//react, please rendervar element = React.createElement(HelloWorld);//React after you render this classReact.render(element, document.body);</script>
+<head>
+  <script src="http://fb.me/react-0.13.0.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+</body>
+<script type="text/jsx">
+
+//define a class
+
+var HelloWorld = React.createClass({
+render: function(){
+return <div>
+<button class="btn btn-primary">
+Hellow World
+<span class="badge">4</span>
+  </button>
+  </div> 
+  }
+  });
+  
+  //react, please render
+  
+  var element = React.createElement(HelloWorld);
+  //React after you render this class
+  
+  React.render(element, document.body);</script>
