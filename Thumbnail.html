@@ -1,0 +1,44 @@
+<head>
+  <script src="http://fb.me/react-0.13.0.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+</body>
+
+<script type="text/jsx">
+var Badge = React.createClass({
+render: function(){
+return <div>
+<button className="btn btn-primary" type="button">
+{this.props.title}
+<span className="badge">{this.props.number}</span>
+  </button>
+</div>
+  }
+});
+
+var Thumbnail = React.createClass({
+  render: function(){
+    return <div className= "col-sm-6 col-md-4">
+    <div className= "thumbnail">
+    <img src={this.props.imageURL} alt="..."></img>
+      <h3>{this.props.header}</h3>
+      <p>{this.props.description}</p>
+      <p><a href="#" className = "btn btn-primary" role="button">Button</a><a href="#" className = "btn btn-primary" role="button">Button</a></p>
+      </div>
+      </div>
+  }
+});
+
+var options = {
+  title: 'Inbox',
+  number: 32,
+  header:"React",
+  description: "blah blah blah",
+  imageURL:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/React.js_logo.svg/2000px-React.js_logo.svg.png'
+
+};
+  var element = React.createElement(Thumbnail, options);
+    React.render(element, document.body);
+    </script>
