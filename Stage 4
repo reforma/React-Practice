@@ -1,0 +1,31 @@
+<head>
+  <script src="http://fb.me/react-0.13.0.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+</body>
+<script type="text/jsx">
+var Badge = React.createClass({
+render: function(){
+return <div>
+<button className="btn btn-primary" type="button">
+{this.props.title} - {this.props.number}
+  </button>
+  </div>
+  }
+  });
+  var form = React.createClass({
+    render: function(){
+      <div>
+      <Badge title={this.props.title} number={this.props.number/>
+      </div>
+    }
+  });
+  //react, please render
+  var options = {
+    title = "Sent Items", number = 32
+  }
+  var element = React.createElement(Badge, options);
+  //React after you render this class
+  React.render(element, document.body);</script>
