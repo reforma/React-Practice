@@ -1,1 +1,262 @@
-<head>  <script src="http://fb.me/react-0.13.0.js"></script>  <script src="http://fb.me/JSXTransformer-0.13.0.js"></script>  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head><body>  <div class="container">  </div></body><script type="text/jsx">  var Badge = React.createClass({    render: function() {      return <div>        <button className="btn btn-primary" type="button">          {this.props.title}          <span className="badge">{this.props.number}</span>  </button></div>  }});var Thumbnail = React.createClass({  render: function(){    return <div className= "col-sm-6 col-md-4">      <div className= "thumbnail">        <img src={this.props.imageURL} alt="..."></img>        <div className="caption">          <h3>{this.props.header}</h3>            <p>{this.props.description}</p>              <p>              <Badge title={this.props.title} number={this.props.number}/>              </p>              </div>              </div>              </div>  }});var ThumbnailList = React.createClass({  render:function(){var list = this.props.thumbnailData.map(function(thumbnailProps){  return <Thumbnail {...thumbnailProps} />});return <div>{list}</div>  }});var options = {thumbnailData: [{    title:'Show Courses',    number:32,    header:"React",    description: "blah blah blah",    imageURL:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/React.js_logo.svg/2000px-React.js_logo.svg.png'  },{  title:'Show Courses',  number:24,  header:"Gulp",  description: "RRRRARRR blah blah blah",  imageURL:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQd0OT4_Uu3QLCc8ojCnLImuM2rCSIN7AokgNEnD4UA8eMNcNB2u4_2ipip'  }]};  var element = React.createElement(ThumbnailList, options);    React.render(element, document.querySelector('.container'))    </script>
+
+
+<head>
+
+
+ 
+<script src="http://fb.me/react-0.13.0.js"></script>
+
+
+ 
+<script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
+
+
+ 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+
+
+<body>
+
+
+ 
+<div class="container">
+
+
+ 
+</div>
+
+
+</body>
+
+
+ 
+
+
+<script
+type="text/jsx">
+
+
+ 
+var Badge = React.createClass({
+
+
+   
+render: function() {
+
+
+     
+return <div>
+
+
+       
+<button className="btn btn-primary" type="button">
+
+
+         
+{this.props.title}
+
+
+         
+<span className="badge">{this.props.number}</span>
+
+
+ 
+</button>
+
+
+</div>
+
+
+ 
+}
+
+
+});
+
+
+ 
+
+
+var
+Thumbnail = React.createClass({
+
+
+ 
+render: function(){
+
+
+   
+return <div className= "col-sm-6 col-md-4">
+
+
+     
+<div className= "thumbnail">
+
+
+       
+<img src={this.props.imageURL} alt="..."></img>
+
+
+       
+<div className="caption">
+
+
+         
+<h3>{this.props.header}</h3>
+
+
+           
+<p>{this.props.description}</p>
+
+
+             
+<p>
+
+
+             
+<Badge title={this.props.title} number={this.props.number}/>
+
+
+             
+</p>
+
+
+             
+</div>
+
+
+             
+</div>
+
+
+             
+</div>
+
+
+ 
+}
+
+
+});
+
+
+ 
+
+
+var
+ThumbnailList = React.createClass({
+
+
+ 
+render:function(){
+
+
+var
+list = this.props.thumbnailData.map(function(thumbnailProps){
+
+
+ 
+return <Thumbnail {...thumbnailProps} />
+
+
+});
+
+
+ 
+
+
+return
+<div>
+
+
+{list}
+
+
+</div>
+
+
+ 
+}
+
+
+});
+
+
+ 
+
+
+var
+options = {
+
+
+thumbnailData:
+[{
+
+
+   
+title:'Show Courses',
+
+
+   
+number:32,
+
+
+   
+header:"React",
+
+
+   
+description: "blah blah blah",
+
+
+   
+imageURL:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/React.js_logo.svg/2000px-React.js_logo.svg.png'
+
+
+ 
+},{
+
+
+ 
+title:'Show Courses',
+
+
+ 
+number:24,
+
+
+ 
+header:"Gulp",
+
+
+ 
+description: "RRRRARRR blah blah blah",
+
+
+ 
+imageURL:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQd0OT4_Uu3QLCc8ojCnLImuM2rCSIN7AokgNEnD4UA8eMNcNB2u4_2ipip'
+
+
+ 
+}]
+
+
+};
+
+
+ 
+var element = React.createElement(ThumbnailList, options);
+
+
+   
+React.render(element, document.querySelector('.container'))
+
+
+   
+</script>
+
+
+  
