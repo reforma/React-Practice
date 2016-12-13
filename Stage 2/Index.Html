@@ -1,0 +1,25 @@
+<head>
+<script src="http://fb.me/react-0.13.0.js"></script>
+<script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+</body>
+
+<script type="text/jsx">
+//define a class
+var Badge = React.createClass({
+render: function() {
+  return <button class "btn btn-primary" type="button">
+  Messages <span class "Badge">4</span>
+  </button>
+}
+});
+
+
+//react, please render
+var element = React.createElement(Badge);
+//React after you render this class
+
+React.render(element, document.body);
+</script>
